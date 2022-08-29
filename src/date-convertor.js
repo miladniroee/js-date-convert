@@ -1,5 +1,11 @@
-class dateConvert {
+class LyDate {
+
+    #Year;
+    #Month;
+    #Day;
+    
     constructor() {
+        
         let date = new Date;
         let today = {
             year: date.getFullYear(),
