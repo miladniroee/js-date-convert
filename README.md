@@ -1,3 +1,10 @@
+> Version 2.0 is completely incompatible with version 1.0
+
+<br>
+
+--------------
+<br><br>
+
 # Date Convert
 You can easily convert dates to each other.
 
