@@ -4,7 +4,12 @@ class LyDate {
     #Month;
     #Day;
     
-    constructor() {
+    constructor(Date) {
+        let ExportDate = Date.split(Date[Date.search(/(?!\d)/)]);
+        this.#Year = ExportDate[0];
+        this.#Month = ExportDate[1];
+        this.#Day = ExportDate[2];
+
         
         let date = new Date;
         let today = {
