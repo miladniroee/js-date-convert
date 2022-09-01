@@ -5,19 +5,23 @@ class LyDate {
     #Day;
     
     constructor(Date) {
+        if(typeof Date !== 'undefined'){
         let ExportDate = Date.split(Date[Date.search(/(?!\d)/)]);
-        this.#Year = ExportDate[0];
-        this.#Month = ExportDate[1];
-        this.#Day = ExportDate[2];
+            this.#Year = ExportDate[0];
+            this.#Month = ExportDate[1];
+            this.#Day = ExportDate[2];
 
-        
-        let date = new Date;
-        let today = {
-            year: date.getFullYear(),
-            month: date.getMonth() + 1,
-            day: date.getDate()
+            
+            let date = new Date;
+            let today = {
+                year: date.getFullYear(),
+                month: date.getMonth() + 1,
+                day: date.getDate()
+            }
+            this.today = this.gregorianToJalali(today);
+        } else {
+            console.error('Constuctor has no parameter as date')
         }
-        this.today = this.gregorianToJalali(today);
     }
 
     jalaliToGregorian(date, option = false) {
