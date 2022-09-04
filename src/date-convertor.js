@@ -6,12 +6,24 @@ class LyDate {
     
     constructor(Date) {
         if(typeof Date !== 'undefined'){
+            if(typeof Date === 'string'){
         let ExportDate = Date.split(Date[Date.search(/(?!\d)/)]);
             this.#Year = ExportDate[0];
             this.#Month = ExportDate[1];
             this.#Day = ExportDate[2];
 
             
+            } else if(typeof Date === 'object') {
+                if(Array.isArray(Date)){
+                    this.#Year = Date[0];
+                    this.#Month =Date[1];
+                    this.#Day =Date[2];
+                } else {
+                    this.#Year =Date.Year;
+                    this.#Month =Date.Month;
+                    this.#Day =Date.Day;
+                }
+            }
             let date = new Date;
             let today = {
                 year: date.getFullYear(),
