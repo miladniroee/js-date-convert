@@ -150,5 +150,9 @@ class LyDate {
         return option ? [parseInt(year), parseInt(month), parseInt(day)] : year + separator + month + separator + day
     }
 
+GetYear() {
+
+} 
+
 
 }
